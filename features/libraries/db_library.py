@@ -4,7 +4,7 @@ import psycopg2
 def get_db_connection():
     """Estabelece a conexão com o banco de dados PostgreSQL"""
     conn = psycopg2.connect(
-        dbname="seu_banco_de_dados",
+        dbname="seu_banco_de_DADOSAAAAA",
         user="seu_usuario",
         password="sua_senha",
         host="localhost",
