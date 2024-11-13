@@ -4,17 +4,17 @@ pipeline {
         stage('Setup') {
             steps {
                 // Configura ambiente virtual (opcional)
-                sh 'python -m venv venv'
-                sh '. venv/bin/activate'
+                bat 'python -m venv venv'
+                bat 'venv\\Scripts\\activate'
                 
                 // Instala dependências
-                sh 'pip install -r requirements.txt'
+                bat 'pip install -r requirements.txt'
             }
         }
         stage('Run Tests') {
             steps {
                 // Executa o teste especificado
-                sh 'robot -d results /features/FichaSmoke.robot'
+                bat 'robot -d results C:\\Users\\suporte\\Desktop\\robotFrameWork\\features\\FichaSmoke.robot'
             }
         }
     }
