@@ -1,5 +1,7 @@
-robotframework
-robotframework-seleniumlibrary
-robotframework-fakerlibrary
-robotframework-databaselibrary
-psycopg2-binary
+robotframework==7.0
+robotframework-faker==5.0.0
+robotframework-seleniumlibrary==6.3.0
+robotframework-requests==0.9.7
+selenium==4.21.0
+requests==2.31.0
+Faker==32.1.0
