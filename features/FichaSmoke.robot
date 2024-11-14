@@ -18,3 +18,8 @@ Cenário 1: Inscrição de sucesso
     E Espera a pagina carregar
     E clicar em continue
     Então clica em enviar escrição
+
+Cenário 2: Recuperação da Ficha de incrição
+    Dado que o usuário preencheu nome completo, email e telefone que já existe
+    E clicar em continue
+    ## Falta apaenas criar as validações 

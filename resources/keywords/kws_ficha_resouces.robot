@@ -16,16 +16,24 @@ Abrir o navegador
 Fechar navegador
     Close Browser
 
+Quando abadona a ficha e entra novamente
+    Go To    ${URLlogin}
+
 Dado que o usuário preencheu nome completo, email e telefone
     ${name}=    FakerLibrary.name    # Gera um primeiro nome aleatório
     ${email}=   FakerLibrary.Email         # Gera um e-mail aleatório
     ${phone}=   FakerLibrary.Phone Number  # Gera um número de telefone aleatório
 
-    Wait Until Element Is Visible     xpath=//div[@class='registration-form__title'][contains(.,'Formulário de Inscrição')]
+    Wait Until Element Is Visible     ${ELEMENT_TITLE}
     Input Text                        ${IPT_NAME}    ${name}
     Input Text                        ${IPT_EMAIL}   ${email}
     Input Text                        ${IPT_PHONE}     12981650685
-    
+
+Dado que o usuário preencheu nome completo, email e telefone que já existe
+    Wait Until Element Is Visible     ${ELEMENT_TITLE}
+    Input Text                        ${IPT_NAME}        Pedro Figueiredo
+    Input Text                        ${IPT_EMAIL}       pedro.figueiredo@gmail.com
+    Input Text                        ${IPT_PHONE}       12981650685
 E clicar em continue 
     Click Button                    ${CLICK_NEXT} 
     Sleep    1s
@@ -41,6 +49,7 @@ E preenche os dados restantes CPF, RG Sexo, Deficiência, raça, data de nascime
     Click Element                    ${ELEMENT_AMARELA} 
     Input Text                       ${IPT_BIRTHDAY}               01031999
     Input Text                       ${IPT_NAME_MATHER}            ${nameMother}
+
 E preenche os dados de CEP e Numero
     ${RandomNumber}    FakerLibrary.Random Number
     

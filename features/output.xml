@@ -1,266 +1,243 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-11-13T19:18:18.093319" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-11-13T21:02:22.481298" rpa="false" schemaversion="5">
 <suite id="s1" name="FichaSmoke" source="C:\Users\suporte\Desktop\robotFrameWork\features\FichaSmoke.robot">
 <test id="s1-t1" name="Cenário 1: Inscrição de sucesso" line="8">
 <kw name="Abrir o navegador" owner="kws_ficha_resouces" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-13T19:18:19.064157" level="INFO">Opening browser 'Chrome' to base url 'https://fichainscricao-dev.inspirali.com/concurso/15505'.</msg>
+<msg time="2024-11-13T21:02:23.251775" level="INFO">Opening browser 'Chrome' to base url 'https://fichainscricao-dev.inspirali.com/concurso/15505'.</msg>
 <arg>${URLlogin}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-13T19:18:19.064157" elapsed="2.439934"/>
+<status status="PASS" start="2024-11-13T21:02:23.250776" elapsed="3.036259"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-13T19:18:21.504091" elapsed="0.046440"/>
+<status status="PASS" start="2024-11-13T21:02:26.287035" elapsed="0.033627"/>
 </kw>
-<status status="PASS" start="2024-11-13T19:18:19.063156" elapsed="2.488373"/>
+<status status="PASS" start="2024-11-13T21:02:23.249775" elapsed="3.070887"/>
 </kw>
 <kw name="Dado que o usuário preencheu nome completo, email e telefone" owner="kws_ficha_resouces">
 <kw name="Name" owner="FakerLibrary">
-<msg time="2024-11-13T19:18:21.553702" level="INFO">${name} = Aylla Costa</msg>
+<msg time="2024-11-13T21:02:26.322694" level="INFO">${name} = Dra. Agatha Viana</msg>
 <var>${name}</var>
 <doc>:example: 'John Doe'</doc>
-<status status="PASS" start="2024-11-13T19:18:21.553702" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-13T21:02:26.322694" elapsed="0.000000"/>
 </kw>
 <kw name="Email" owner="FakerLibrary">
-<msg time="2024-11-13T19:18:21.554704" level="INFO">${email} = almeidaheitor@example.com</msg>
+<msg time="2024-11-13T21:02:26.323694" level="INFO">${email} = ravyalves@example.com</msg>
 <var>${email}</var>
-<status status="PASS" start="2024-11-13T19:18:21.554704" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-13T21:02:26.323694" elapsed="0.000000"/>
 </kw>
 <kw name="Phone Number" owner="FakerLibrary">
-<msg time="2024-11-13T19:18:21.555706" level="INFO">${phone} = +55 (051) 9390 5430</msg>
+<msg time="2024-11-13T21:02:26.323694" level="INFO">${phone} = +55 (021) 8408-4312</msg>
 <var>${phone}</var>
-<status status="PASS" start="2024-11-13T19:18:21.555706" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-13T21:02:26.323694" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//div[@class='registration-form__title'][contains(.,'Formulário de Inscrição')]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-13T19:18:21.556705" elapsed="2.135510"/>
+<status status="PASS" start="2024-11-13T21:02:26.324694" elapsed="1.754405"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-13T19:18:23.693263" level="INFO">Typing text 'Aylla Costa' into text field 'xpath=(//input[contains(@type,'text')])[1]'.</msg>
+<msg time="2024-11-13T21:02:28.080099" level="INFO">Typing text 'Dra. Agatha Viana' into text field 'xpath=(//input[contains(@type,'text')])[1]'.</msg>
 <arg>${IPT_NAME}</arg>
 <arg>${name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T19:18:23.692215" elapsed="0.097515"/>
+<status status="PASS" start="2024-11-13T21:02:28.079099" elapsed="0.170130"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-13T19:18:23.789730" level="INFO">Typing text 'almeidaheitor@example.com' into text field 'xpath=(//input[contains(@type,'text')])[2]'.</msg>
+<msg time="2024-11-13T21:02:28.249229" level="INFO">Typing text 'ravyalves@example.com' into text field 'xpath=(//input[contains(@type,'text')])[2]'.</msg>
 <arg>${IPT_EMAIL}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T19:18:23.789730" elapsed="0.096400"/>
+<status status="PASS" start="2024-11-13T21:02:28.249229" elapsed="0.117502"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-13T19:18:23.887164" level="INFO">Typing text '12981650685' into text field 'xpath=(//input[contains(@type,'text')])[3]'.</msg>
+<msg time="2024-11-13T21:02:28.367254" level="INFO">Typing text '12981650685' into text field 'xpath=(//input[contains(@type,'text')])[3]'.</msg>
 <arg>${IPT_PHONE}</arg>
 <arg>12981650685</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T19:18:23.886130" elapsed="0.072328"/>
+<status status="PASS" start="2024-11-13T21:02:28.366731" elapsed="0.114027"/>
 </kw>
-<status status="PASS" start="2024-11-13T19:18:21.552666" elapsed="2.405792"/>
+<status status="PASS" start="2024-11-13T21:02:26.321698" elapsed="2.159060"/>
 </kw>
 <kw name="E clicar em continue" owner="kws_ficha_resouces">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-13T19:18:23.958458" level="INFO">Clicking button 'xpath=//button[@class='btn btn-primary'][contains(.,'Continue')]'.</msg>
+<msg time="2024-11-13T21:02:28.481779" level="INFO">Clicking button 'xpath=//button[@class='btn btn-primary'][contains(.,'Continue')]'.</msg>
 <arg>${CLICK_NEXT}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T19:18:23.958458" elapsed="0.045238"/>
+<status status="PASS" start="2024-11-13T21:02:28.481779" elapsed="0.049570"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-13T19:18:25.005149" level="INFO">Slept 1 second.</msg>
+<msg time="2024-11-13T21:02:29.531877" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-13T19:18:24.004712" elapsed="1.000437"/>
+<status status="PASS" start="2024-11-13T21:02:28.531349" elapsed="1.000528"/>
 </kw>
-<status status="PASS" start="2024-11-13T19:18:23.958458" elapsed="1.047204"/>
+<status status="PASS" start="2024-11-13T21:02:28.481779" elapsed="1.050098"/>
 </kw>
 <kw name="E preenche os dados restantes CPF, RG Sexo, Deficiência, raça, data de nascimento e se possui deficiência" owner="kws_ficha_resouces">
 <kw name="Name" owner="FakerLibrary">
-<msg time="2024-11-13T19:18:25.007677" level="INFO">${nameMother} = Ana Luiza Nascimento</msg>
+<msg time="2024-11-13T21:02:29.534160" level="INFO">${nameMother} = Srta. Luiza Mendonça</msg>
 <var>${nameMother}</var>
 <doc>:example: 'John Doe'</doc>
-<status status="PASS" start="2024-11-13T19:18:25.007677" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-13T21:02:29.533085" elapsed="0.001075"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ELEMENT_CPF}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-13T19:18:25.007677" elapsed="0.020432"/>
+<status status="PASS" start="2024-11-13T21:02:29.534160" elapsed="0.012890"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-13T19:18:25.029112" level="INFO">Typing text '46534171805' into text field 'xpath=(//input[contains(@type,'text')])[4]'.</msg>
+<msg time="2024-11-13T21:02:29.548051" level="INFO">Typing text '46534171805' into text field 'xpath=(//input[contains(@type,'text')])[4]'.</msg>
 <arg>${IPT_CPF}</arg>
 <arg>46534171805</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T19:18:25.028109" elapsed="0.084994"/>
+<status status="PASS" start="2024-11-13T21:02:29.547050" elapsed="0.086548"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-13T19:18:25.114329" level="INFO">Typing text '39239534' into text field 'xpath=(//input[contains(@type,'text')])[5]'.</msg>
+<msg time="2024-11-13T21:02:29.633598" level="INFO">Typing text '39239534' into text field 'xpath=(//input[contains(@type,'text')])[5]'.</msg>
 <arg>${IPT_RG}</arg>
 <arg>39239534</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T19:18:25.113103" elapsed="0.072372"/>
+<status status="PASS" start="2024-11-13T21:02:29.633598" elapsed="0.065251"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-13T19:18:25.186511" level="INFO">Clicking element 'xpath=(//span[contains(@class,'insp-radio__checkmark')])[2]'.</msg>
+<msg time="2024-11-13T21:02:29.699851" level="INFO">Clicking element 'xpath=(//span[contains(@class,'insp-radio__checkmark')])[2]'.</msg>
 <arg>${CHECK_MAN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T19:18:25.185475" elapsed="0.030462"/>
+<status status="PASS" start="2024-11-13T21:02:29.698849" elapsed="0.030251"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-13T19:18:25.216987" level="INFO">Clicking element 'xpath=//div[@class='insp-dropdown__select'][contains(.,'Selecionar')]'.</msg>
+<msg time="2024-11-13T21:02:29.729100" level="INFO">Clicking element 'xpath=//div[@class='insp-dropdown__select'][contains(.,'Selecionar')]'.</msg>
 <arg>${DROP_SELECT_RACE}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T19:18:25.216987" elapsed="0.028156"/>
+<status status="PASS" start="2024-11-13T21:02:29.729100" elapsed="0.031067"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-13T19:18:25.245143" level="INFO">Clicking element 'xpath=//div[@class='insp-dropdown__item'][contains(.,'Amarela')]'.</msg>
+<msg time="2024-11-13T21:02:29.760167" level="INFO">Clicking element 'xpath=//div[@class='insp-dropdown__item'][contains(.,'Amarela')]'.</msg>
 <arg>${ELEMENT_AMARELA}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T19:18:25.245143" elapsed="0.039520"/>
+<status status="PASS" start="2024-11-13T21:02:29.760167" elapsed="0.039004"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-13T19:18:25.284663" level="INFO">Typing text '01031999' into text field 'xpath=(//input[contains(@type,'text')])[6]'.</msg>
+<msg time="2024-11-13T21:02:29.799171" level="INFO">Typing text '01031999' into text field 'xpath=(//input[contains(@type,'text')])[6]'.</msg>
 <arg>${IPT_BIRTHDAY}</arg>
 <arg>01031999</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T19:18:25.284663" elapsed="0.079311"/>
+<status status="PASS" start="2024-11-13T21:02:29.799171" elapsed="0.081303"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-13T19:18:25.365007" level="INFO">Typing text 'Ana Luiza Nascimento' into text field 'xpath=(//input[contains(@type,'text')])[7]'.</msg>
+<msg time="2024-11-13T21:02:29.881503" level="INFO">Typing text 'Srta. Luiza Mendonça' into text field 'xpath=(//input[contains(@type,'text')])[7]'.</msg>
 <arg>${IPT_NAME_MATHER}</arg>
 <arg>${nameMother}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T19:18:25.365007" elapsed="0.082870"/>
+<status status="PASS" start="2024-11-13T21:02:29.881503" elapsed="0.098997"/>
 </kw>
-<status status="PASS" start="2024-11-13T19:18:25.006677" elapsed="0.441200"/>
+<status status="PASS" start="2024-11-13T21:02:29.533085" elapsed="0.447415"/>
 </kw>
 <kw name="E clicar em continue" owner="kws_ficha_resouces">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-13T19:18:25.447877" level="INFO">Clicking button 'xpath=//button[@class='btn btn-primary'][contains(.,'Continue')]'.</msg>
+<msg time="2024-11-13T21:02:29.981518" level="INFO">Clicking button 'xpath=//button[@class='btn btn-primary'][contains(.,'Continue')]'.</msg>
 <arg>${CLICK_NEXT}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T19:18:25.447877" elapsed="0.033489"/>
+<status status="PASS" start="2024-11-13T21:02:29.981518" elapsed="0.038241"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-13T19:18:26.481723" level="INFO">Slept 1 second.</msg>
+<msg time="2024-11-13T21:02:31.021268" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-13T19:18:25.481366" elapsed="1.000357"/>
+<status status="PASS" start="2024-11-13T21:02:30.020759" elapsed="1.000509"/>
 </kw>
-<status status="PASS" start="2024-11-13T19:18:25.447877" elapsed="1.033846"/>
+<status status="PASS" start="2024-11-13T21:02:29.980500" elapsed="1.041282"/>
 </kw>
 <kw name="E preenche os dados de CEP e Numero" owner="kws_ficha_resouces">
 <kw name="Random Number" owner="FakerLibrary">
-<msg time="2024-11-13T19:18:26.482836" level="INFO">${RandomNumber} = 5531</msg>
+<msg time="2024-11-13T21:02:31.022799" level="INFO">${RandomNumber} = 91</msg>
 <var>${RandomNumber}</var>
 <doc>Generate a random integer according to the following rules:</doc>
-<status status="PASS" start="2024-11-13T19:18:26.482836" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-13T21:02:31.022799" elapsed="0.000998"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ELEMENT_CEP}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-13T19:18:26.482836" elapsed="1.728054"/>
+<status status="PASS" start="2024-11-13T21:02:31.023797" elapsed="0.016994"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-13T19:18:28.210890" level="INFO">Typing text '02251000' into text field 'xpath=(//input[contains(@type,'text')])[1]'.</msg>
+<msg time="2024-11-13T21:02:31.041792" level="INFO">Typing text '02251000' into text field 'xpath=(//input[contains(@type,'text')])[1]'.</msg>
 <arg>${IPT_cep}</arg>
 <arg>02251000</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T19:18:28.210890" elapsed="0.060514"/>
+<status status="PASS" start="2024-11-13T21:02:31.041792" elapsed="0.068005"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-13T19:18:28.271404" level="INFO">Typing text '5531' into text field 'xpath=(//input[contains(@type,'text')])[5]'.</msg>
+<msg time="2024-11-13T21:02:31.109797" level="INFO">Typing text '91' into text field 'xpath=(//input[contains(@type,'text')])[5]'.</msg>
 <arg>${IPT_NUMBER_HOUSE}</arg>
 <arg>${RandomNumber}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T19:18:28.271404" elapsed="0.064754"/>
+<status status="PASS" start="2024-11-13T21:02:31.109797" elapsed="0.065510"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-13T19:18:29.336469" level="INFO">Slept 1 second.</msg>
+<msg time="2024-11-13T21:02:32.175661" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-13T19:18:28.336158" elapsed="1.000311"/>
+<status status="PASS" start="2024-11-13T21:02:31.175307" elapsed="1.000354"/>
 </kw>
-<status status="PASS" start="2024-11-13T19:18:26.482225" elapsed="2.854764"/>
+<status status="PASS" start="2024-11-13T21:02:31.021782" elapsed="1.153879"/>
 </kw>
 <kw name="E clicar em continue" owner="kws_ficha_resouces">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-13T19:18:29.340003" level="INFO">Clicking button 'xpath=//button[@class='btn btn-primary'][contains(.,'Continue')]'.</msg>
+<msg time="2024-11-13T21:02:32.177190" level="INFO">Clicking button 'xpath=//button[@class='btn btn-primary'][contains(.,'Continue')]'.</msg>
 <arg>${CLICK_NEXT}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T19:18:29.340003" elapsed="0.049427"/>
+<status status="PASS" start="2024-11-13T21:02:32.177190" elapsed="0.044520"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-13T19:18:30.391498" level="INFO">Slept 1 second.</msg>
+<msg time="2024-11-13T21:02:33.222054" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-13T19:18:29.389430" elapsed="1.002068"/>
+<status status="PASS" start="2024-11-13T21:02:32.221710" elapsed="1.000885"/>
 </kw>
-<status status="PASS" start="2024-11-13T19:18:29.339002" elapsed="1.052496"/>
+<status status="PASS" start="2024-11-13T21:02:32.176684" elapsed="1.045911"/>
 </kw>
 <kw name="E Espera a pagina carregar" owner="kws_ficha_resouces">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ELEMENT_TEXT_CAMPUS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-13T19:18:30.394521" elapsed="0.022552"/>
+<status status="PASS" start="2024-11-13T21:02:33.224900" elapsed="0.028094"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-13T19:18:30.418077" level="INFO">Clicking element 'xpath=(//span[contains(@class,'insp-radio__checkmark')])[1]'.</msg>
+<msg time="2024-11-13T21:02:33.254015" level="INFO">Clicking element 'xpath=(//span[contains(@class,'insp-radio__checkmark')])[1]'.</msg>
 <arg>${SELECT_DISCOUNT_TRUE}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T19:18:30.417073" elapsed="0.029498"/>
+<status status="PASS" start="2024-11-13T21:02:33.252994" elapsed="0.034256"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-13T19:18:30.446571" level="INFO">Clicking element 'xpath=(//span[contains(@class,'insp-radio__checkmark')])[2]'.</msg>
+<msg time="2024-11-13T21:02:33.288251" level="INFO">Clicking element 'xpath=(//span[contains(@class,'insp-radio__checkmark')])[2]'.</msg>
 <arg>${SELECT_DISCOUNT_FALSE}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T19:18:30.446571" elapsed="0.028280"/>
-</kw>
-<status status="PASS" start="2024-11-13T19:18:30.393528" elapsed="0.081323"/>
-</kw>
-<kw name="E clicar em continue" owner="kws_ficha_resouces">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-13T19:18:30.475852" level="INFO">Clicking button 'xpath=//button[@class='btn btn-primary'][contains(.,'Continue')]'.</msg>
-<arg>${CLICK_NEXT}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T19:18:30.475852" elapsed="0.037174"/>
+<status status="PASS" start="2024-11-13T21:02:33.287250" elapsed="0.027078"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-11-13T19:18:31.513258" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
+<msg time="2024-11-13T21:03:03.315649" level="INFO">Slept 30 seconds.</msg>
+<arg>30s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-11-13T19:18:30.513026" elapsed="1.000232"/>
+<status status="PASS" start="2024-11-13T21:02:33.315333" elapsed="30.000316"/>
 </kw>
-<status status="PASS" start="2024-11-13T19:18:30.474851" elapsed="1.038407"/>
-</kw>
-<kw name="Então clica em enviar escrição" owner="kws_ficha_resouces">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ELEMENT_PERSONAL_DATA}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-13T19:18:31.514717" elapsed="0.015000"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-13T19:18:31.529717" level="INFO">Clicking button 'xpath=//button[@class='btn btn-primary'][contains(.,'Enviar Inscrição')]'.</msg>
-<arg>${CLICK_SEND_ENROLLMENT}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-13T19:18:31.529717" elapsed="0.054722"/>
-</kw>
-<status status="PASS" start="2024-11-13T19:18:31.514717" elapsed="0.070728"/>
+<status status="PASS" start="2024-11-13T21:02:33.223751" elapsed="30.091898"/>
 </kw>
 <kw name="Fechar navegador" owner="kws_ficha_resouces" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-13T19:18:31.586443" elapsed="2.201180"/>
+<status status="PASS" start="2024-11-13T21:03:03.318464" elapsed="2.131372"/>
 </kw>
-<status status="PASS" start="2024-11-13T19:18:31.586443" elapsed="2.201180"/>
+<status status="PASS" start="2024-11-13T21:03:03.316211" elapsed="2.133625"/>
 </kw>
 <doc>Esse teste tem como objetivo realizar a incrição de um candidato até o final da ficha</doc>
 <tag>InscriçãoSucesso</tag>
-<status status="PASS" start="2024-11-13T19:18:19.062158" elapsed="14.725465"/>
+<status status="PASS" start="2024-11-13T21:02:23.248775" elapsed="42.202161"/>
 </test>
-<status status="PASS" start="2024-11-13T19:18:18.094324" elapsed="15.694300"/>
+<status status="PASS" start="2024-11-13T21:02:22.482300" elapsed="42.972529"/>
 </suite>
 <statistics>
 <total>
@@ -274,7 +251,7 @@
 </suite>
 </statistics>
 <errors>
-<msg time="2024-11-13T19:18:18.141040" level="ERROR">Error in file 'C:\Users\suporte\Desktop\robotFrameWork\resources\keywords\kws_ficha_resouces.robot' on line 3: Library '..\features\libraries\db_library.py' does not exist.</msg>
-<msg time="2024-11-13T19:18:18.142041" level="ERROR">Error in file 'C:\Users\suporte\Desktop\robotFrameWork\resources\keywords\kws_ficha_resouces.robot' on line 4: Library 'C:UserssuporteDesktopobotFrameWorkfeatureslibrariesdb_library.py' does not exist.</msg>
+<msg time="2024-11-13T21:02:22.521906" level="ERROR">Error in file 'C:\Users\suporte\Desktop\robotFrameWork\resources\keywords\kws_ficha_resouces.robot' on line 3: Library '..\features\libraries\db_library.py' does not exist.</msg>
+<msg time="2024-11-13T21:02:22.522905" level="ERROR">Error in file 'C:\Users\suporte\Desktop\robotFrameWork\resources\keywords\kws_ficha_resouces.robot' on line 4: Library 'C:UserssuporteDesktopobotFrameWorkfeatureslibrariesdb_library.py' does not exist.</msg>
 </errors>
 </robot>
